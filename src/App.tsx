@@ -16,8 +16,7 @@ export default function App() {
       <Caption2 />
       <Caption3 />
 
-
-      <div className='main-container'>
+      <div className="main-container">
         <DynamicItems />
         <Logos />
         <Footer />
