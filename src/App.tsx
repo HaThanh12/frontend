@@ -3,8 +3,9 @@ import Caption2 from "./blocks/Caption2";
 import Caption3 from "./blocks/Caption3";
 import Header from "./blocks/Header";
 import Hero from "./blocks/Hero";
-
-import "./App.css";
+import DynamicItems from "./footer/dynamicItems";
+import Logos from "./footer/logos";
+import Footer from "./footer/footer";
 
 export default function App() {
   return (
@@ -14,6 +15,13 @@ export default function App() {
       <Caption1 />
       <Caption2 />
       <Caption3 />
+
+
+      <div className='main-container'>
+        <DynamicItems />
+        <Logos />
+        <Footer />
+      </div>
     </>
   );
 }

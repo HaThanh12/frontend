@@ -3,8 +3,13 @@ import image10 from "../assets/image10.png";
 
 const Hero = () => {
   return (
+<<<<<<< HEAD
     <div className="bg-[url('/background.png')] bg-cover bg-top-left h-64 sm:h-80 lg:h-[35rem] pt-[2rem] w-full min-h-[95vh]">
       <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-[1520px]">
+=======
+    <div className="bg-[url('/background.png')] bg-cover bg-top-left h-64 sm:h-80 lg:h-[35rem] w-full pt-[2rem] w-full min-h-[95vh]">
+      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center" >
+>>>>>>> a1d25ef5ab1a09ef91e99a6557937ef873425c36
         <h1 className="font-bold text-5xl md:text-6xl mt-8 mb-2">
           {data.hero.title}
         </h1>
@@ -16,7 +21,7 @@ const Hero = () => {
           />
         </div>
 
-        <img src={image10} alt="image10" className="w-3xl lg:w-4xl pt-[2rem]" />
+        <img style={{maxWidth: '100%', height: 'auto'}} src={image10} alt="image10" className="w-3xl lg:w-4xl" />
       </div>
     </div>
   );

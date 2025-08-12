@@ -12,11 +12,6 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-
-
-    "framer-motion": "^12.23.12",
-    "next": "^15.4.6",
-
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
     "@fortawesome/free-brands-svg-icons": "^7.0.0",
     "@fortawesome/free-regular-svg-icons": "^7.0.0",
@@ -25,6 +20,7 @@
     "@mui/icons-material": "^7.3.1",
     "@mui/material": "^7.3.1",
     "@tailwindcss/vite": "^4.1.11",
+    "framer-motion": "^12.23.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

@@ -9,7 +9,7 @@ export default function Caption3() {
         backgroundColor: "#EFF1F4",
         width: "100%",
         maxWidth: 1520,
-        ml: { xs: 0, md: 11 },
+        ml: { xs: 0, md: 0 },
       }}
     >
       {/* Container */}
