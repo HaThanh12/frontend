@@ -5,14 +5,11 @@ import App from './App.tsx'
 import DynamicItems from './footer/dynamicItems.tsx'
 import Logos from './footer/logos.tsx'
 import Footer from './footer/footer.tsx'
+// src/main.tsx
+import "./App.css";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <div className='main-container'>
-      <App />
-      <DynamicItems/>
-      <Logos/>
-      <Footer/>
-    </div>
-  </StrictMode>,
-)
+    <App />
+  </StrictMode>
+);
