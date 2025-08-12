@@ -10,13 +10,13 @@ const Header: React.FC = () => {
 
   return (
     <header className="topnav ">
-      <div className="container flex flex-row items-center justify-between px-[1.5rem] py-[0.5em] sticky bg-white shadow-lg shadow-gray-150">
+      <div className="container flex flex-row items-center justify-between px-[1.2rem] lg:px-[5.5rem] py-[0.5em] sticky bg-white shadow-lg shadow-gray-150">
         <Logo />
 
         {/* Desktop nav (hidden on md and below) */}
         <div className="hidden md:flex flex-row items-center p-[0.6rem]">
           {data.headers.map((header, index) => (
-            <ButtonLink key={index} href={header.href}>
+            <ButtonLink key={index} href={header.href} className="text-lg">
               {header.text}
             </ButtonLink>
           ))}
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           {menuOpen && (
             <div className="absolute top-[60px] right-0 bg-white shadow-lg p-4 flex flex-col gap-2 z-50 md:hidden">
               {data.headers.map((header, index) => (
-                <ButtonLink key={index} href={header.href}>
+                <ButtonLink key={index} href={header.href} className="text-lg">
                   {header.text}
                 </ButtonLink>
               ))}
