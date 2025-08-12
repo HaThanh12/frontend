@@ -6,7 +6,7 @@ type ColorMap = {
 
 const colorMap: ColorMap = {
   gray: "bg-gray-200 hover:bg-gray-300",
-  blue: "bg-blue-700 hover:bg-blue-800",
+  blue: "bg-sky-700 hover:bg-sky-800 text-white",
   white: "bg-white",
 };
 

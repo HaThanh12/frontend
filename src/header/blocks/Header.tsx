@@ -1,91 +1,59 @@
-import { useState } from "react";
-import type { FC } from "react";
+import React, { useState } from "react";
 import ButtonLink from "../components/ButtonLink";
-import Logo from "../components/Logo";
 import { documentConverterData as data } from "../data/data";
+import Logo from "../components/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMagnifyingGlass,
-  faBars,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 
-const Header: FC = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  const toggleMenu = (): void => {
-    setMenuOpen((prev) => !prev);
-  };
-
-  const closeMenu = (): void => {
-    setMenuOpen(false);
-  };
+const Header: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg shadow-gray-200 sticky top-0 left-0 w-full z-10">
-      <div className="container flex flex-row flex-wrap items-center justify-between gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 md:px-[5rem] py-[0.5em]">
+    <header className="topnav">
+      <div className="container flex flex-row items-center justify-between px-[1.5rem] py-[0.5em]">
         {/* Logo */}
-        <div className="text-sm sm:text-base lg:text-md">
-          <Logo />
-        </div>
+        <Logo />
 
-        {/* Desktop Nav */}
-        <div className="hidden sm:flex flex-wrap items-center justify-center">
+        {/* Desktop nav (hidden on md and below) */}
+        <div className="hidden md:flex flex-row items-center p-[0.6rem]">
           {data.headers.map((header, index) => (
-            <ButtonLink
-              key={index}
-              href={header.href}
-              className="text-sm sm:text-base lg:text-md"
-            >
+            <ButtonLink key={index} href={header.href}>
               {header.text}
             </ButtonLink>
           ))}
         </div>
 
-        <div className="hidden sm:flex items-center text-sm sm:text-base lg:text-md">
-          <FontAwesomeIcon icon={faMagnifyingGlass} className="mr-[1rem]" />
-          <ButtonLink
-            color="blue"
-            className="text-sm sm:text-base lg:text-md text-white"
+        <div className="flex flex-row items-center gap-3 relative">
+          <FontAwesomeIcon icon={faSearch} className="cursor-pointer" />
+
+          {/* Hamburger - visible only on md and below */}
+          <button
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+            className="flex md:hidden"
           >
-            Login
-          </ButtonLink>
-        </div>
+            <FontAwesomeIcon icon={faBars} size="lg" />
+          </button>
 
-        <button
-          className="sm:hidden flex items-center text-xl"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
-        </button>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      {menuOpen && (
-        <div className="sm:hidden flex flex-col gap-3 px-4 pb-4">
-          {data.headers.map((header, index) => (
-            <ButtonLink
-              key={index}
-              href={header.href}
-              className="text-base"
-              onClick={closeMenu}
-            >
-              {header.text}
-            </ButtonLink>
-          ))}
-          <div className="flex items-center gap-2 mt-2">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-            <ButtonLink
-              color="blue"
-              className="text-base text-white"
-              onClick={closeMenu}
-            >
-              Login
-            </ButtonLink>
+          {/* Login button - visible only on lg and above */}
+          <div className="hidden md:block">
+            <ButtonLink color="blue">Login</ButtonLink>
           </div>
+
+          {menuOpen && (
+            <div className="absolute top-[60px] right-0 bg-white shadow-lg p-4 flex flex-col gap-2 z-50 md:hidden">
+              {data.headers.map((header, index) => (
+                <ButtonLink key={index} href={header.href}>
+                  {header.text}
+                </ButtonLink>
+              ))}
+              <ButtonLink color="blue" className="text-white">
+                Login
+              </ButtonLink>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </header>
   );
 };
