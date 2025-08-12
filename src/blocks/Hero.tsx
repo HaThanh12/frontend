@@ -3,8 +3,8 @@ import image10 from "../assets/image10.png";
 
 const Hero = () => {
   return (
-    <div className="bg-[url('/background.png')] bg-cover bg-top-left h-64 sm:h-80 lg:h-[35rem] w-full pt-[2rem] w-full min-h-[95vh]">
-      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
+    <div className="bg-[url('/background.png')] bg-cover bg-top-left h-64 sm:h-80 lg:h-[35rem] pt-[2rem] w-full min-h-[95vh]">
+      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center max-w-[1520px]">
         <h1 className="font-bold text-5xl md:text-6xl mt-8 mb-2">
           {data.hero.title}
         </h1>
