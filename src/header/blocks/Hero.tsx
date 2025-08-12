@@ -9,7 +9,7 @@ const Hero = () => {
           {data.hero.title}
         </h1>
 
-        <div className="w-full sm:max-w-xl md:max-w-xl flex flex-wrap items-center justify-center">
+        <div className="w-full sm:max-w-xl md:max-w-2xl flex flex-wrap items-center justify-center">
           <p
             dangerouslySetInnerHTML={{ __html: data.hero.subtitle }}
             className="text-gray-500 text-base sm:text-lg md:text-xl text-center"

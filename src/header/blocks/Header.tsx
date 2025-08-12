@@ -22,8 +22,8 @@ const Header: FC = () => {
   };
 
   return (
-    <header className="topnav">
-      <div className="container flex flex-row flex-wrap items-center w-9xl md:w-5xl justify-between gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 md:px-[2.5rem] py-[0.6em]">
+    <header className="bg-white shadow-lg shadow-gray-200 sticky top-0 left-0 w-full z-10">
+      <div className="container flex flex-row flex-wrap items-center justify-between gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 md:px-[5rem] py-[0.5em]">
         {/* Logo */}
         <div className="text-sm sm:text-base lg:text-md">
           <Logo />
@@ -44,7 +44,10 @@ const Header: FC = () => {
 
         <div className="hidden sm:flex items-center text-sm sm:text-base lg:text-md">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="mr-[1rem]" />
-          <ButtonLink color="blue" className="text-sm sm:text-base lg:text-md">
+          <ButtonLink
+            color="blue"
+            className="text-sm sm:text-base lg:text-md text-white"
+          >
             Login
           </ButtonLink>
         </div>
@@ -73,7 +76,11 @@ const Header: FC = () => {
           ))}
           <div className="flex items-center gap-2 mt-2">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
-            <ButtonLink color="blue" className="text-base" onClick={closeMenu}>
+            <ButtonLink
+              color="blue"
+              className="text-base text-white"
+              onClick={closeMenu}
+            >
               Login
             </ButtonLink>
           </div>

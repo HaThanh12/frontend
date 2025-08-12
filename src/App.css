@@ -7,7 +7,7 @@
   }
 
   mark {
-    background-color: theme("colors.yellow.300"); /* Tailwind color */
+    background-color: theme("colors.yellow.300");
     color: theme("colors.gray.500");
     padding: 0.1em 0.25em;
     border-radius: 0.25rem;

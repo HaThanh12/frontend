@@ -6,7 +6,7 @@ type ColorMap = {
 
 const colorMap: ColorMap = {
   gray: "bg-gray-200 hover:bg-gray-300",
-  blue: "bg-blue-500 hover:bg-blue-600",
+  blue: "bg-blue-700 hover:bg-blue-800",
   white: "bg-white",
 };
 
@@ -31,7 +31,7 @@ function ButtonLink({
     <a
       href={href}
       onClick={onClick}
-      className={`text-sm inline-block py-2 px-4 rounded ${bgClasses} transition-colors ${className}`}
+      className={`text-sm inline-block py-1 px-4 rounded-md ${bgClasses} transition-colors ${className}`}
     >
       {children}
     </a>
