@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ButtonLink from "../components/ButtonLink";
-import { documentConverterData as data } from "../data/data";
+import { documentConverterData as data } from "../datas/data";
 import Logo from "../components/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";

@@ -1,4 +1,4 @@
-import { documentConverterData as data } from "../data/data.ts";
+import { documentConverterData as data } from "../datas/data.ts";
 import image10 from "../assets/image10.png";
 
 const Hero = () => {
