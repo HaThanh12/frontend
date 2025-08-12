@@ -1,42 +1,101 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.site-footer {
+    background-color: #032450;
+    color: #dbe5f4;
+    padding: 3rem 4.5rem 1.5rem;
+    max-width: 1520px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logos-container img {
+    max-width: 100%;
+    height: auto; 
+    /* margin: 0 auto; */ 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-divlon{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+    gap: 2rem; 
+    margin-bottom: 2.5rem;
+    max-width: 1520px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.footer-divlon ul {
+    list-style: none;
+    padding: 0;
 }
 
-.card {
-  padding: 2em;
+h3{
+    margin-bottom: 0;
 }
 
-.read-the-docs {
-  color: #888;
+h2 {
+    padding: 0;
+}
+
+.footer-divtong {
+        width: 100%;
+        max-width: 1520px;
+    }
+
+/* .footer-composable-doc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+} */
+
+@media (max-width: 500px) {
+    .logos h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1520px) {
+    .footer-divtong {
+        width: 100%;
+        /* margin-right: auto;
+        margin-left: auto; */
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-divlon {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-composable-doc {
+        grid-column: 1 / -1;
+        order: -1;
+        margin-bottom: 2rem;
+    }    
+}
+
+@media (max-width: 500px) {
+    .footer-divlon {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-composable-doc{
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+    }
+}
+
+.main-container {
+    max-width: 1520px;   
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
