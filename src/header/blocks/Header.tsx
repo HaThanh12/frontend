@@ -9,9 +9,8 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="topnav">
-      <div className="container flex flex-row items-center justify-between px-[1.5rem] py-[0.5em]">
-        {/* Logo */}
+    <header className="topnav ">
+      <div className="container flex flex-row items-center justify-between px-[1.5rem] py-[0.5em] sticky bg-white shadow-lg shadow-gray-150">
         <Logo />
 
         {/* Desktop nav (hidden on md and below) */}
