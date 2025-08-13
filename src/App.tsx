@@ -14,7 +14,7 @@ export default function App() {
   return (
     <>
     <Routes>
-      {/* Redirect "/" sang "/home" */}
+     
       <Route path="/" element={<Navigate to="/home" replace />} />
       {/* Trang Home */}
       <Route
@@ -38,9 +38,9 @@ export default function App() {
     </Routes>
 
     <Routes>
-      {/* Redirect "/" sang "/home" */}
+      
       <Route path="/" element={<Navigate to="/templates" replace />} />
-      {/* Trang Home */}
+      {/* Trang templates */}
       <Route
         path="/templates"
         element={
