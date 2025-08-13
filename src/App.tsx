@@ -13,53 +13,53 @@ import Caption4 from "./blocks/Caption4";
 export default function App() {
   return (
     <>
-    <Routes>
-      {/* Redirect "/" sang "/home" */}
-      <Route path="/" element={<Navigate to="/home" replace />} />
-      {/* Trang Home */}
-      <Route
-        path="/home"
-        element={
-          <>
-            <Header />
-            <Hero landingPage={1} />
-            <Caption1 />
-            <Caption2 />
-            <Caption3 />
+      <Routes>
+        {/* Redirect "/" sang "/home" */}
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        {/* Trang Home */}
+        <Route
+          path="/home"
+          element={
+            <>
+              <Header />
+              <Hero landingPage={1} />
+              <Caption1 />
+              <Caption2 />
+              <Caption3 />
 
-            <div className="main-container">
-              <DynamicItems />
-              <Logos />
-              <Footer />
-            </div>
-          </>
-        }
-      />
-    </Routes>
+              <div className="main-container">
+                <DynamicItems />
+                <Logos />
+                <Footer />
+              </div>
+            </>
+          }
+        />
+      </Routes>
 
-    <Routes>
-      {/* Redirect "/" sang "/home" */}
-      <Route path="/" element={<Navigate to="/templates" replace />} />
-      {/* Trang Home */}
-      <Route
-        path="/templates"
-        element={
-          <>
-            <Header />
-            <Hero landingPage={2} />
-            <Caption4 />
-            <Caption2 />
-            <Caption3 />
+      <Routes>
+        {/* Redirect "/" sang "/templates" */}
+        <Route path="/" element={<Navigate to="/templates" replace />} />
+        {/* Trang Home */}
+        <Route
+          path="/templates"
+          element={
+            <>
+              <Header />
+              <Hero landingPage={2} />
+              <Caption4 />
+              <Caption2 />
+              <Caption3 />
 
-            <div className="main-container">
-              <DynamicItems />
-              <Logos />
-              <Footer />
-            </div>
-          </>
-        }
-      />
-    </Routes>
+              <div className="main-container">
+                <DynamicItems />
+                <Logos />
+                <Footer />
+              </div>
+            </>
+          }
+        />
+      </Routes>
     </>
   );
 }
