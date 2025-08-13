@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Hero />
+      <Hero landingPage={1} />
       <Caption1 />
       <Caption2 />
       <Caption3 />
