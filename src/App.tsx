@@ -8,13 +8,14 @@ import Hero from "./blocks/Hero";
 import DynamicItems from "./footer/dynamicItems";
 import Logos from "./footer/logos";
 import Footer from "./footer/footer";
+import Caption4 from "./blocks/Caption4";
 
 export default function App() {
   return (
+    <>
     <Routes>
       {/* Redirect "/" sang "/home" */}
       <Route path="/" element={<Navigate to="/home" replace />} />
-
       {/* Trang Home */}
       <Route
         path="/home"
@@ -35,5 +36,30 @@ export default function App() {
         }
       />
     </Routes>
+
+    <Routes>
+      {/* Redirect "/" sang "/home" */}
+      <Route path="/" element={<Navigate to="/templates" replace />} />
+      {/* Trang Home */}
+      <Route
+        path="/templates"
+        element={
+          <>
+            <Header />
+            <Hero landingPage={2} />
+            <Caption4 />
+            <Caption2 />
+            <Caption3 />
+
+            <div className="main-container">
+              <DynamicItems />
+              <Logos />
+              <Footer />
+            </div>
+          </>
+        }
+      />
+    </Routes>
+    </>
   );
 }

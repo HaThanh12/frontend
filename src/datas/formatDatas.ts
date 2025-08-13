@@ -1,14 +1,15 @@
 import caption4 from '../assets/caption4.png';
 import caption2 from '../assets/caption2.png';
 import caption3 from '../assets/caption3.png';
+import caption5 from '../assets/caption5.png';
 
 export interface FormatsSectionData {
   title: string;
-  title2?: string; // optional for the second title
+  title2?: string;
   highlighted: string;
   descriptions: string[];
   buttonText: string;
-  img?: string; // kiểu string chứa đường dẫn import
+  img?: string;
 }
 
 export const formatsSectionData: FormatsSectionData = {
@@ -19,7 +20,7 @@ export const formatsSectionData: FormatsSectionData = {
     'Create documents using <b>Microsoft Office, LibreOffice, OnlyOffice, Google Docs, Zoho Docs, WYSIWYG Editors, VSCode, Adobe, Canva, Affinity Designer,</b> and more.',
     'By combining the familiar experience of these tools with Carbone\'s advanced features, the possibilities for dynamic document automation are endless: <b>Charts, HTML, Images, Infinite Nested Loops, Barcodes, Pagination, Headers, Footers, Multi-language, ...</b>',
   ],
-  img: caption4, // dùng import ảnh
+  img: caption4,
   buttonText: 'Explore our examples',
 };
 
@@ -32,7 +33,7 @@ export const formatsSectionData2: FormatsSectionData = {
     'This gives you unparalleled freedom to design your reports while seamlessly <mark>using your existing JSON</mark> endpoints within your application.',
     'Decoupling design from data is a best practice in computer science.',
   ],
-  img: caption2, // dùng import ảnh
+  img: caption2,
   buttonText: 'Learn More',
 };
 
@@ -46,7 +47,18 @@ export const formatsSectionData3: FormatsSectionData = {
     'Each new feature is seamlessly integrated without breaking existing ones. A template created with Carbone v2 remains fully compatible with Carbone v7.',
     'Our <mark>5,000 fully automated tests</mark> and counting ensure robustness for years to come.'
   ],
-  img: caption3, // dùng import ảnh của bạn
+  img: caption3,
   buttonText: 'See our delivery lifecycle',
 };
 
+export const formatsSectionData1: FormatsSectionData = {
+  title: 'Possibilities',
+  highlighted: 'Unlimited Design',
+  descriptions: [
+    'Unlike many reporting tools, Carbone does not replace your existing design tools.',
+    'Create documents using <b>Microsoft Office, LibreOffice, OnlyOffice, Google Docs, Zoho Docs, WYSIWYG Editors, VSCode, Adobe, Canva, Affinity Designer,</b> and more.',
+    'By combining the familiar experience of these tools with Carbone\'s advanced features, the possibilities for dynamic document automation are endless: <b>Charts, HTML, Images, Infinite Nested Loops, Barcodes, Pagination, Headers, Footers, Multi-language, ...</b>',
+  ],
+  img: caption5,
+  buttonText: 'Explore our examples',
+};
