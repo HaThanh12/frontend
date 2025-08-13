@@ -1,4 +1,4 @@
-import { documentConverterData as data } from "../data/data.ts";
+import { documentConverterData as data } from "../datas/data.ts";
 import image10 from "../assets/image10.png";
 
 const Hero = () => {
@@ -16,7 +16,12 @@ const Hero = () => {
           />
         </div>
 
-        <img src={image10} alt="image10" className="w-3xl lg:w-4xl pt-[2rem]" />
+        <img
+          style={{ maxWidth: "100%", height: "auto" }}
+          src={image10}
+          alt="image10"
+          className="w-3xl lg:w-4xl"
+        />
       </div>
     </div>
   );
