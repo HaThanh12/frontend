@@ -1,3 +1,5 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import Caption1 from "./blocks/Caption1";
 import Caption2 from "./blocks/Caption2";
 import Caption3 from "./blocks/Caption3";
@@ -9,18 +11,29 @@ import Footer from "./footer/footer";
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <Hero landingPage={1} />
-      <Caption1 />
-      <Caption2 />
-      <Caption3 />
+    <Routes>
+      {/* Redirect "/" sang "/home" */}
+      <Route path="/" element={<Navigate to="/home" replace />} />
 
-      <div className="main-container">
-        <DynamicItems />
-        <Logos />
-        <Footer />
-      </div>
-    </>
+      {/* Trang Home */}
+      <Route
+        path="/home"
+        element={
+          <>
+            <Header />
+            <Hero landingPage={1} />
+            <Caption1 />
+            <Caption2 />
+            <Caption3 />
+
+            <div className="main-container">
+              <DynamicItems />
+              <Logos />
+              <Footer />
+            </div>
+          </>
+        }
+      />
+    </Routes>
   );
 }
