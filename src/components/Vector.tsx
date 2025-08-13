@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 
 const Vector = ({ isInvert = false }) => {
   return (
-    <Box sx={{ width: "100%", height: "auto", lineHeight: 0 }}>
+    <Box sx={{ height: "auto", lineHeight: 0, maxWidth: 1520, width: "100%" }}>
       {!isInvert ? (
         <svg
           width="100%"
