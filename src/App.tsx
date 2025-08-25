@@ -27,7 +27,6 @@ export default function App() {
               <Caption1 />
               <Caption2 />
               <Caption3 />
-              <Pagination perPage={8} categoryNumber={1} />
               <div className="main-container">
                 <DynamicItems />
                 <Logos />
@@ -36,11 +35,6 @@ export default function App() {
             </>
           }
         />
-      </Routes>
-
-      <Routes>
-        {/* Redirect "/" sang "/templates" */}
-        <Route path="/" element={<Navigate to="/templates" replace />} />
         {/* Trang Templates */}
         <Route
           path="/templates"
@@ -48,9 +42,8 @@ export default function App() {
             <>
               <Header />
               <Hero landingPage={2} />
-              <Caption4 />
-              <Caption2 />
-              <Caption3 />
+              <Pagination perPage={8} categoryNumber={1} />
+              <Pagination perPage={3} categoryNumber={2} />
 
               <div className="main-container">
                 <DynamicItems />
