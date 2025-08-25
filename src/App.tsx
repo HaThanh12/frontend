@@ -1,14 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import Caption1 from "./blocks/Caption1";
-import Caption2 from "./blocks/Caption2";
-import Caption3 from "./blocks/Caption3";
-import Header from "./blocks/Header";
-import Hero from "./blocks/Hero";
-import DynamicItems from "./footer/dynamicItems";
-import Logos from "./footer/logos";
-import Footer from "./footer/footer";
-import Pagination from "./blocks/Pagination";
+import HomePage from "./pages/HomePage";
+import TemplatesPage from "./pages/TemplatesPage";
 
 export default function App() {
   return (
@@ -17,41 +10,9 @@ export default function App() {
         {/* Redirect "/" sang "/home" */}
         <Route path="/" element={<Navigate to="/home" replace />} />
         {/* Trang Home */}
-        <Route
-          path="/home"
-          element={
-            <>
-              <Header />
-              <Hero landingPage={1} />
-              <Caption1 />
-              <Caption2 />
-              <Caption3 />
-              <div className="main-container">
-                <DynamicItems />
-                <Logos />
-                <Footer />
-              </div>
-            </>
-          }
-        />
+        <Route path="/home" element={<HomePage />} />
         {/* Trang Templates */}
-        <Route
-          path="/templates"
-          element={
-            <>
-              <Header />
-              <Hero landingPage={2} />
-              <Pagination perPage={8} categoryNumber={1} />
-              <Pagination perPage={3} categoryNumber={2} />
-
-              <div className="main-container">
-                <DynamicItems />
-                <Logos />
-                <Footer />
-              </div>
-            </>
-          }
-        />
+        <Route path="/templates" element={<TemplatesPage />} />
       </Routes>
     </>
   );
