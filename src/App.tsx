@@ -9,6 +9,7 @@ import DynamicItems from "./footer/dynamicItems";
 import Logos from "./footer/logos";
 import Footer from "./footer/footer";
 import Caption4 from "./blocks/Caption4";
+import Pagination from "./blocks/Pagination";
 
 export default function App() {
   return (
@@ -26,7 +27,7 @@ export default function App() {
               <Caption1 />
               <Caption2 />
               <Caption3 />
-
+              <Pagination perPage={8} categoryNumber={1} />
               <div className="main-container">
                 <DynamicItems />
                 <Logos />
@@ -40,7 +41,7 @@ export default function App() {
       <Routes>
         {/* Redirect "/" sang "/templates" */}
         <Route path="/" element={<Navigate to="/templates" replace />} />
-        {/* Trang Home */}
+        {/* Trang Templates */}
         <Route
           path="/templates"
           element={
