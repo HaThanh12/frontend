@@ -8,7 +8,6 @@ import Hero from "./blocks/Hero";
 import DynamicItems from "./footer/dynamicItems";
 import Logos from "./footer/logos";
 import Footer from "./footer/footer";
-import Caption4 from "./blocks/Caption4";
 import Pagination from "./blocks/Pagination";
 
 export default function App() {
